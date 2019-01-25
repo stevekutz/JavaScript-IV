@@ -16,7 +16,7 @@ class Instructor extends Person{
   constructor(inst_attr){
     super(inst_attr);
     this.specialty = inst_attr.specialty;
-    this.favLanguage = instr_att.favLanguage;
+    this.favLanguage = inst_attr.favLanguage;
     this.catchPhrase = inst_attr.catchPhrase;
   }
 
@@ -53,7 +53,7 @@ class ProjectManager extends Instructor {
   constructor(pm_attr){
     super(pm_attr);
     this.gradClassname = pm_attr.gradClassname;
-    this.favInStructor = pm_attr.favInStructor;
+    this.favInstructor = pm_attr.favInstructor;
   }
 
   standUp(channel){
@@ -63,3 +63,91 @@ class ProjectManager extends Instructor {
     console.log(`${this.name} debugs ${student.name}'s code on ${subject} `);
   }
 }
+
+// objects
+const jory = new Instructor({
+  name: 'Jory',
+  age: 52,
+  location: 'Denver',
+  gender: 'male',
+  specialty: 'Django',
+  favLanguage: 'Python',
+  catchPhrase: 'I need to look that up on StackOveflow'
+});
+
+
+const beth= new Instructor({
+  name: 'Beth',
+  age: 29,
+  location: 'Salt Lake City',
+  gender: 'female',
+  specialty: 'databases',
+  favLanguage: 'MongoDb',
+  catchPhrase: 'the answer is in the data'
+});
+
+
+const skip = new Instructor({
+  name: 'Skip',
+  age: 41,
+  location: 'Miami',
+  gender: 'male',
+  specialty: 'algorithms',
+  favLanguage: 'C/C++',
+  catchPhrase: 'there is faster way to do that'
+});
+
+const gary = new Student({
+  name: 'Trey',
+  age: 25,
+  location: 'Athens',
+  gender: 'male',
+  previousBackground: 'sales',
+  className: 'WFT19',
+  favSubjects: ['food', 'dancing', 'cooking'],
+});
+
+const fred = new Student({
+  name: 'Fred',
+  age: 36,
+  location: 'New York',
+  gender: 'male',
+  previousBackground: 'mortician',
+  className: 'WFT13',
+  favSubjects: ['poetry', 'music', 'wine tasting', 'foreign films'],
+});
+
+const fiona = new Student({
+  name: 'Fiona',
+  age: 31,
+  location: 'Denver',
+  gender: 'female',
+  previousBackground: 'drummer',
+  className: 'WFT17',
+  favSubjects: ['speed metal', 'mosh pits', 'tattoos'],
+});
+
+const violet = new ProjectManager({
+  name: 'Violet',
+  age: 41,
+  location: 'Miami',
+  gender: 'male',
+  specialty: 'algorithms',
+  favLanguage: 'JavaScript',
+  catchPhrase: 'I love React',
+  gradClassname: 'CS302',
+  favInstructor: 'Skip'
+});
+
+const mark = new ProjectManager({
+  name: 'Skip',
+  age: 47,
+  location: 'Fargo',
+  gender: 'male',
+  specialty: 'front end',
+  favLanguage: 'JavaScript',
+  catchPhrase: 'I love LESS, Flexbox, & Grid',
+  gradClassname: 'CS342',
+  favInstructor: 'Beth'
+});
+
