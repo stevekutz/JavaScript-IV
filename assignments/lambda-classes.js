@@ -60,6 +60,15 @@ class Student extends Person {
   sprintChallenge(subject) {
     return `${this.name} has begun a sprint challenge on ${subject}`;
   }
+  graduate(){
+    if(this.grade > 70) {
+      return `${this.name} is ready to go Pro, they can graduate !!!`
+    } else {
+      return `${this.name} needs to fix up some missings assignments and have them graded`;
+    }
+  }
+
+
 }
 
 
@@ -177,4 +186,5 @@ const cathy = new ProjectManager({
   favInstructor: 'Beth'
 });
 
-cathy.gradeChange(fred);
+// cathy.gradeChange(fred);
+// 
