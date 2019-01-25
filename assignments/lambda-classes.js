@@ -187,4 +187,5 @@ const cathy = new ProjectManager({
 });
 
 // cathy.gradeChange(fred);
-// 
+// fred.graduate()
+// skip.gradeChange(fred);   // keep going until under <=70
