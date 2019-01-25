@@ -98,7 +98,7 @@ const skip = new Instructor({
 });
 
 const gary = new Student({
-  name: 'Trey',
+  name: 'Gary',
   age: 25,
   location: 'Athens',
   gender: 'male',
@@ -131,23 +131,22 @@ const violet = new ProjectManager({
   name: 'Violet',
   age: 41,
   location: 'Miami',
-  gender: 'male',
+  gender: 'female',
   specialty: 'algorithms',
   favLanguage: 'JavaScript',
   catchPhrase: 'I love React',
   gradClassname: 'CS302',
   favInstructor: 'Skip'
 });
-
-const mark = new ProjectManager({
-  name: 'Skip',
-  age: 47,
-  location: 'Fargo',
-  gender: 'male',
-  specialty: 'front end',
+const cathy = new ProjectManager({
+  name: 'Cathy',
+  age: 40,
+  location: 'Austin',
+  gender: 'female',
+  specialty: 'Redux',
   favLanguage: 'JavaScript',
-  catchPhrase: 'I love LESS, Flexbox, & Grid',
-  gradClassname: 'CS342',
+  catchPhrase: 'I love Redux',
+  gradClassname: 'CS366',
   favInstructor: 'Beth'
 });
 
