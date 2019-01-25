@@ -30,13 +30,15 @@ class Instructor extends Person{
 
   gradeChange(student){
     if(getRandomInt(2)) {
-      student.grade += getRandomBetween(1, 10);
+      student.grade += Math.round(getRandomBetween(1, 10));
+    } else {
+      student.grade -= Math.round(getRandomBetween(1, 10));
     }
-      studeent.grade -= getRandomBetween(1, 10);
-    if(student.grade > 100) { student.grade === 100 }
-    if(student.grade < 0) {student.grade === 0}
 
-    return `${student.name}'s grade is ${student.grade}`
+    if(student.grade > 100) { student.grade = 100 }
+    if(student.grade < 0) {student.grade = 0}
+
+    return `${student.name}'s grade is ${Math.round(student.grade)}`
   }
 }
 
@@ -175,3 +177,4 @@ const cathy = new ProjectManager({
   favInstructor: 'Beth'
 });
 
+cathy.gradeChange(fred);
