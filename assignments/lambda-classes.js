@@ -27,6 +27,17 @@ class Instructor extends Person{
   grade(student, subject){
     return `${student.name} receives a perfect score on ${subject}`;
   }
+
+  gradeChange(student){
+    if(getRandomInt(2)) {
+      student.grade += getRandomBetween(1, 10);
+    }
+      studeent.grade -= getRandomBetween(1, 10);
+    if(student.grade > 100) { student.grade === 100 }
+    if(student.grade < 0) {student.grade === 0}
+
+    return `${student.name}'s grade is ${student.grade}`
+  }
 }
 
 class Student extends Person {
@@ -35,6 +46,7 @@ class Student extends Person {
     this.previousBackground = stu_attr.previousBackground;
     this.className = stu_attr.className;
     this.favSubjects = stu_attr.favSubjects;
+    this.grade = stu_attr.grade; // STRETCH
   }
 
   listsubjects() {
@@ -97,6 +109,16 @@ const skip = new Instructor({
   catchPhrase: 'there is faster way to do that'
 });
 
+
+function getRandomBetween(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
+
 const gary = new Student({
   name: 'Gary',
   age: 25,
@@ -105,6 +127,7 @@ const gary = new Student({
   previousBackground: 'sales',
   className: 'WFT19',
   favSubjects: ['food', 'dancing', 'cooking'],
+  grade: getRandomBetween(30, 100),
 });
 
 const fred = new Student({
@@ -115,6 +138,7 @@ const fred = new Student({
   previousBackground: 'mortician',
   className: 'WFT13',
   favSubjects: ['poetry', 'music', 'wine tasting', 'foreign films'],
+  grade: getRandomBetween(70, 100),
 });
 
 const fiona = new Student({
@@ -125,6 +149,7 @@ const fiona = new Student({
   previousBackground: 'drummer',
   className: 'WFT17',
   favSubjects: ['speed metal', 'mosh pits', 'tattoos'],
+  grade: getRandomBetween(90, 100),
 });
 
 const violet = new ProjectManager({
